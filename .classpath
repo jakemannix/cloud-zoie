@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="perf/src/java"/>
+	<classpathentry kind="src" path="zoie-luke/src"/>
+	<classpathentry kind="src" path="java"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="src" path="example/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/master/commons-logging.jar"/>
+	<classpathentry kind="lib" path="lib/master/dwr.jar"/>
+	<classpathentry kind="lib" path="lib/master/fastutil.jar" sourcepath="/Users/john/opensource/fastutil-5.1.5/"/>
+	<classpathentry kind="lib" path="lib/master/json.jar"/>
+	<classpathentry kind="lib" path="lib/master/log4j.jar"/>
+	<classpathentry kind="lib" path="lib/master/lucene-highlighter.jar"/>
+	<classpathentry kind="lib" path="lib/master/servlet-api.jar"/>
+	<classpathentry kind="lib" path="lib/master/spring-webmvc.jar"/>
+	<classpathentry kind="lib" path="lib/master/spring.jar"/>
+	<classpathentry kind="lib" path="lib/test/junit.jar"/>
+	<classpathentry kind="lib" path="lib/jetty/mx4j-tools.jar"/>
+	<classpathentry kind="lib" path="lib/jetty/mx4j.jar"/>
+	<classpathentry kind="lib" path="lib/master/lucene-core.jar"/>
+	<classpathentry kind="lib" path="lib/tools/lukeall-0.9.9.jar"/>
+	<classpathentry kind="output" path="output"/>
+</classpath>
