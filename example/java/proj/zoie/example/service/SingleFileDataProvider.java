@@ -63,8 +63,8 @@ public class SingleFileDataProvider<T> extends StreamDataProvider<T> {
 
   @Override
   public DataConsumer.DataEvent<T> next() {
-    if((position % 100000) == 0) {
-      if(time > 0) System.out.println(((float)(System.nanoTime() - time)) / 1e9 + "s per 100k docs");
+    if((position % 10000) == 0) {
+      if(time > 0) System.out.println(((float)(System.nanoTime() - time)) / 1e9 + "s per 10k docs");
       time = System.nanoTime();
     }
 

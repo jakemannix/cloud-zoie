@@ -28,26 +28,21 @@ function removeChildren(cell)
 
 function renderDoc(doc, elem)
 {
-    var flds=doc.fields;
-	var path="/";  //flds.path[0];
+    var flds = doc.fields;
+	var path = "/";  //flds.path[0];
+    var user = flds.user;
+    var numFollow = flds.num_followers;
+    var timestamp = flds.timestamp;
+    var tweet = flds.content;
 	var frag=flds.fragment[0];
-	var name;
-	var idx=path.lastIndexOf("/");
-	if (idx==-1){
-		name=path;
-	}
-	else{
-		name=path.substring(idx+1);
-	}
 	
 	var score=doc.score.toFixed(5);
 	
-	var nameStr="<a class=\"hitlink\" href=\"file:///"+path+"\">"+name+"</a>";
-	var fragStr="<div class=\"frag\">" + frag + "</div>";
-	var pathStr="<span class=\"path\">"+path+"</span>";
-	var scoreStr="<span class=\"score\">score: "+score+"</span>";
-	
-	elem.innerHTML=nameStr+fragStr+"<div>"+pathStr+" - "+scoreStr+"</div>";
+	var nameStr = "<a class=\"hitlink\" href=\"http://www.twitter.com/"+user+"\">" + user + "</a>";
+	var fragStr = "<div class=\"frag\">" + frag + "</div>";;
+	var numStr  = "(with " + numFollow + " followers) tweeted ";
+    var timeStr = "at " + timestamp + "</div>";
+	elem.innerHTML = fragStr + "<div class=\"user\">" + nameStr +  numStr + timeStr;
 }
 		    
 function handleDoSearch(result)

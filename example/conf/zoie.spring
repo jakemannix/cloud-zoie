@@ -10,13 +10,61 @@
 	<bean id="fileInterpreter" class="proj.zoie.impl.indexing.FileIndexableInterpreter" />
 
     <bean id="tweetTerpreter" class="proj.zoie.example.service.IndexableTweeterpreter" />
-	
-	<bean id="indexingSystem" class="proj.zoie.impl.indexing.SimpleZoieSystem" init-method="start" destroy-method="shutdown">
-		<constructor-arg value="file:${index.directory}"/>
-		<constructor-arg ref="tweetTerpreter" />
-		<constructor-arg value="1000" />
-		<constructor-arg value="300000" />
+
+    <bean id="tweetTerpreter2" class="proj.zoie.example.service.IndexableTweeterpreter" />
+
+	<bean id="num_followers" class="com.browseengine.bobo.facets.impl.RangeFacetHandler">
+		<constructor-arg value="num_followers" />
+		<constructor-arg>
+			<bean class="com.browseengine.bobo.facets.data.PredefinedTermListFactory">
+				<constructor-arg value="java.lang.Integer"/>
+				<constructor-arg value="0000000000" />
+			</bean>
+		</constructor-arg>
+		<constructor-arg>
+		     <list>
+		        <value>[0 TO 1]</value>
+		        <value>[2 TO 10]</value>
+		        <value>[11 TO 50]</value>
+		        <value>[51 TO 200]</value>
+		        <value>[201 TO 10000]</value>
+		        <value>[10001 TO *]</value>  
+		     </list>
+		</constructor-arg>
 	</bean>
+
+    <bean id="boboFactory" class="proj.zoie.example.service.BoboIndexReaderDecorator">
+        <constructor-arg>
+            <list>
+                <ref bean="num_followers"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="boringFactory" class="proj.zoie.impl.indexing.DefaultIndexReaderDecorator"/>
+
+    <bean id="indexingSystem" class="proj.zoie.impl.indexing.ZoieSystem" init-method="start" destroy-method="shutdown">
+        <constructor-arg index="0" value="file:${index.directory}"/>
+        <constructor-arg index="1" ref="tweetTerpreter" />
+        <constructor-arg index="2" ref="boringFactory"/>
+        <constructor-arg index="3"><null/></constructor-arg>
+        <constructor-arg index="4"><null/></constructor-arg>
+        <constructor-arg index="5" value="10000" />
+        <constructor-arg index="6" value="300000" />
+        <constructor-arg index="7" value="true"/>
+    </bean>
+
+    <bean id="indexingSystem2" class="proj.zoie.impl.indexing.ZoieSystem" init-method="start" destroy-method="shutdown">
+        <constructor-arg index="0" value="file:${index.directory}/../index2"/>
+        <constructor-arg index="1" ref="tweetTerpreter" />
+        <constructor-arg index="2" ref="boringFactory"/>
+        <constructor-arg index="3"><null/></constructor-arg>
+        <constructor-arg index="4"><null/></constructor-arg>
+        <constructor-arg index="5" value="10000" />
+        <constructor-arg index="6" value="300000" />
+        <constructor-arg index="7" value="true"/>
+    </bean>
+
 	
 	<bean id="zoie-system-mbean" class="proj.zoie.mbean.ZoieSystemAdmin">
 		<constructor-arg ref="indexingSystem" />
@@ -25,7 +73,15 @@
 	<bean id="zoie-index-stat-mbean" class="proj.zoie.mbean.ZoieIndexingStatusAdmin">
 		<constructor-arg ref="indexingSystem" />
 	</bean>
-	
+
+	<bean id="zoie-system-mbean2" class="proj.zoie.mbean.ZoieSystemAdmin">
+		<constructor-arg ref="indexingSystem2" />
+	</bean>
+
+	<bean id="zoie-index-stat-mbean2" class="proj.zoie.mbean.ZoieIndexingStatusAdmin">
+		<constructor-arg ref="indexingSystem2" />
+	</bean>
+
 	<bean id="defaultOptScheduler" class="proj.zoie.api.indexing.DefaultOptimizeScheduler" factory-bean="indexingSystem" factory-method="getOptimizeScheduler" />
 	
 	<bean id="optimize-scheduler-mbean" class="proj.zoie.mbean.ZoieOptimizeSchedulerAdmin">
@@ -45,6 +101,7 @@
 	 -->
 	
 	<bean id="searchService" class="proj.zoie.example.service.impl.ExampleZoieSearchServiceImpl">
-		<constructor-arg ref="index-reader-factory"/>
+		<constructor-arg index="0" ref="index-reader-factory"/>
+        <constructor-arg index="1" ref="indexingSystem2"/>
 	</bean>
 </beans>
