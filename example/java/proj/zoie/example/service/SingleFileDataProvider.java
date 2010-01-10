@@ -34,6 +34,8 @@ public class SingleFileDataProvider<T> extends StreamDataProvider<T> {
     this.deserializer = deserializer;
     this.datumByteSize = datumByteSize;
     bytes = new byte[datumByteSize];
+    File f = new File(fileName);
+    if(!f.exists() || !f.canRead()) throw new IOException("Unreadable file: " + fileName);
     inputChannel = new FileInputStream(new File(fileName)).getChannel();
     buf = ByteBuffer.wrap(bytes);
     position = 0;
@@ -62,7 +64,7 @@ public class SingleFileDataProvider<T> extends StreamDataProvider<T> {
   @Override
   public DataConsumer.DataEvent<T> next() {
     if((position % 100000) == 0) {
-      System.out.println(((float)(System.nanoTime() - time)) / 1e9 + "s per 100k docs");
+      if(time > 0) System.out.println(((float)(System.nanoTime() - time)) / 1e9 + "s per 100k docs");
       time = System.nanoTime();
     }
 
@@ -73,7 +75,7 @@ public class SingleFileDataProvider<T> extends StreamDataProvider<T> {
       int bytesRead = 0;
       T t = null;
       while(!full && t == null) {
-        bytesRead += inputChannel.read(buf);
+        bytesRead += Math.max(0, inputChannel.read(buf));
         full = (bytesRead >= datumByteSize);
         if(!full) {
           try { sleep(); } catch (InterruptedException ie) {
@@ -125,7 +127,7 @@ public class SingleFileDataProvider<T> extends StreamDataProvider<T> {
 
   public void sleep() throws InterruptedException {
     Thread.sleep(25);
-    if((sleepCt++ % 120) == 0) System.out.println("\n.");
+//    if((sleepCt++ % 120) == 0) System.out.println("\n.");
   }
 
   @Override

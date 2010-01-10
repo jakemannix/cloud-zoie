@@ -71,6 +71,13 @@ public class TestTweet extends TestCase {
     doTestTweet(getDataWithNewlinesInserted(), 7);    // all but the broken one, but last tweet isn't big again!
   }
 
+  public void testTweetFileTweet() throws Exception {
+    TwitterFileDataProvider provider = new TwitterFileDataProvider("tweets");
+    while(provider.next() != null) {
+      System.out.println("yay!");
+    }
+  }
+
   private byte[] getData() {
     byte[][] b = new byte[tweetStrings.length][];
     int totalLen = 0;
