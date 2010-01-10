@@ -9,7 +9,7 @@
 	
 	<bean id="fileInterpreter" class="proj.zoie.impl.indexing.FileIndexableInterpreter" />
 
-    <bean id="tweetTerpreter" class="proj.zoie.impl.indexing.IndexableTweeterpreter" />
+    <bean id="tweetTerpreter" class="proj.zoie.example.service.IndexableTweeterpreter" />
 	
 	<bean id="indexingSystem" class="proj.zoie.impl.indexing.SimpleZoieSystem" init-method="start" destroy-method="shutdown">
 		<constructor-arg value="file:${index.directory}"/>

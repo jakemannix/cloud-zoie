@@ -9,141 +9,131 @@
       <sourceFolder url="file://$MODULE_DIR$/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/example/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/example/test" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="commons-logging.jar">
         <CLASSES>
-          <root url="file://lib/master/commons-logging.jar" />
+          <root url="jar://$MODULE_DIR$/lib/master/commons-logging.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="dwr.jar">
         <CLASSES>
-          <root url="file://lib/master/dwr.jar" />
+          <root url="jar://$MODULE_DIR$/lib/master/dwr.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="fastutil.jar">
         <CLASSES>
-          <root url="file://lib/master/fastutil.jar" />
+          <root url="jar://$MODULE_DIR$/lib/master/fastutil.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/../../../../john/opensource/fastutil-5.1.5" />
-        </SOURCES>
+        <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="json.jar">
         <CLASSES>
-          <root url="file://lib/master/json.jar" />
+          <root url="jar://$MODULE_DIR$/lib/master/json.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="log4j.jar">
         <CLASSES>
-          <root url="file://lib/master/log4j.jar" />
+          <root url="jar://$MODULE_DIR$/lib/master/log4j.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="lucene-highlighter.jar">
         <CLASSES>
-          <root url="file://lib/master/lucene-highlighter.jar" />
+          <root url="jar://$MODULE_DIR$/lib/master/lucene-highlighter.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="servlet-api.jar">
         <CLASSES>
-          <root url="file://lib/master/servlet-api.jar" />
+          <root url="jar://$MODULE_DIR$/lib/master/servlet-api.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="spring-webmvc.jar">
         <CLASSES>
-          <root url="file://lib/master/spring-webmvc.jar" />
+          <root url="jar://$MODULE_DIR$/lib/master/spring-webmvc.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="spring.jar">
         <CLASSES>
-          <root url="file://lib/master/spring.jar" />
+          <root url="jar://$MODULE_DIR$/lib/master/spring.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="junit.jar">
         <CLASSES>
-          <root url="file://lib/test/junit.jar" />
+          <root url="jar://$MODULE_DIR$/lib/test/junit.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="mx4j-tools.jar">
         <CLASSES>
-          <root url="file://lib/jetty/mx4j-tools.jar" />
+          <root url="jar://$MODULE_DIR$/lib/jetty/mx4j-tools.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="mx4j.jar">
         <CLASSES>
-          <root url="file://lib/jetty/mx4j.jar" />
+          <root url="jar://$MODULE_DIR$/lib/jetty/mx4j.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="lucene-core.jar">
         <CLASSES>
-          <root url="file://lib/master/lucene-core.jar" />
+          <root url="jar://$MODULE_DIR$/lib/master/lucene-core.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library name="lukeall-0.9.9.jar">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/lib/tools/lukeall-0.9.9.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="jar://$APPLICATION_HOME_DIR$/lib/junit.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

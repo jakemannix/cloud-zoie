@@ -8,7 +8,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/master/commons-logging.jar"/>
 	<classpathentry kind="lib" path="lib/master/dwr.jar"/>
-	<classpathentry kind="lib" path="lib/master/fastutil.jar" sourcepath="/Users/john/opensource/fastutil-5.1.5/"/>
+	<classpathentry kind="lib" path="lib/master/fastutil.jar" />
 	<classpathentry kind="lib" path="lib/master/json.jar"/>
 	<classpathentry kind="lib" path="lib/master/log4j.jar"/>
 	<classpathentry kind="lib" path="lib/master/lucene-highlighter.jar"/>

@@ -5,7 +5,7 @@
 
 	<import resource="zoie.spring"/>
 	
-	<bean id="twitterDataProvider" class="proj.zoie.impl.indexing.TwitterFileDataProvider">
+	<bean id="twitterDataProvider" class="proj.zoie.example.service.TwitterFileDataProvider">
         <constructor-arg value="${tweets.file}"/>
 		<property name="dataConsumer" ref="consumer" />
 	</bean>
