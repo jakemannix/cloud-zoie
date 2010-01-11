@@ -48,14 +48,14 @@ public class ExampleZoieSearchServiceImpl<R extends IndexReader> implements Zoie
   private static final class HC extends Collector {
     ZoieIndexReader r;
     int docBase;
-   
+    PriorityQueue pq;
     @Override
     public void setScorer(org.apache.lucene.search.Scorer scorer) throws IOException {
     }
 
     @Override
     public void collect(int i) throws IOException {
-
+      
     }
 
     @Override

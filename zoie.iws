@@ -141,10 +141,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExampleZoieSearchServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ExampleZoieSearchServiceImpl.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/example/java/proj/zoie/example/service/impl/ExampleZoieSearchServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="0" selection-start="4845" selection-end="4845" vertical-scroll-proportion="0.0">
+            <state line="57" column="6" selection-start="2115" selection-end="2115" vertical-scroll-proportion="-1.3469945">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,10 +161,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ZoieMultiReader.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ZoieMultiReader.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/java/proj/zoie/api/ZoieMultiReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="0" selection-start="3519" selection-end="3519" vertical-scroll-proportion="-2.0442104">
+            <state line="99" column="0" selection-start="3519" selection-end="3519" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -219,8 +219,8 @@
         <option value="$PROJECT_DIR$/example/webapp/style.css" />
         <option value="$PROJECT_DIR$/example/java/proj/zoie/example/service/IndexableTweeterpreter.java" />
         <option value="$PROJECT_DIR$/example/webapp/search.js" />
-        <option value="$PROJECT_DIR$/example/java/proj/zoie/example/service/impl/ExampleZoieSearchServiceImpl.java" />
         <option value="$PROJECT_DIR$/example/test/proj/zoie/example/service/impl/ExampleServiceTest.java" />
+        <option value="$PROJECT_DIR$/example/java/proj/zoie/example/service/impl/ExampleZoieSearchServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -862,7 +862,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3902439" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32092425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32092425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -985,12 +985,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example/java/proj/zoie/example/service/impl/ExampleZoieSearchServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/java/proj/zoie/api/ZoieMultiReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="0" selection-start="4845" selection-end="4845" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="99" column="0" selection-start="3519" selection-end="3519" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1001,10 +999,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java/proj/zoie/api/ZoieMultiReader.java">
+    <entry file="file://$PROJECT_DIR$/example/java/proj/zoie/example/service/impl/ExampleZoieSearchServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="0" selection-start="3519" selection-end="3519" vertical-scroll-proportion="-2.0442104">
-          <folding />
+        <state line="57" column="6" selection-start="2115" selection-end="2115" vertical-scroll-proportion="-1.3469945">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
