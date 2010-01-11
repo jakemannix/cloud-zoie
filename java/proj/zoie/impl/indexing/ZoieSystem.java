@@ -77,7 +77,14 @@ public class ZoieSystem<R extends IndexReader,V> extends AsyncDataConsumer<V> im
 	 * @param batchDelay How long to wait before flushing to disk.
 	 * @param rtIndexing Ensure real-time.
 	 */
-	public ZoieSystem(File idxDir,ZoieIndexableInterpreter<V> interpreter,IndexReaderDecorator<R> indexReaderDecorator,Analyzer analyzer,Similarity similarity,int batchSize,long batchDelay,boolean rtIndexing)
+	public ZoieSystem(File idxDir,
+                    ZoieIndexableInterpreter<V> interpreter,
+                    IndexReaderDecorator<R> indexReaderDecorator,
+                    Analyzer analyzer,
+                    Similarity similarity,
+                    int batchSize,
+                    long batchDelay,
+                    boolean rtIndexing)
 	{
 		if (idxDir==null) throw new IllegalArgumentException("null idxDir.");
 		_idxDir=idxDir;
