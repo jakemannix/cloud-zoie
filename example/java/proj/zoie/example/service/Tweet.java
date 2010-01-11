@@ -22,6 +22,7 @@ public class Tweet {
     System.arraycopy(b2, 0, newBuf, offset, b2.length);
     return newBuf;
   }
+  static int count = 0;
 
   public Tweet(byte[] b) throws IOException {
     tweetChars = new char[b.length];
@@ -43,11 +44,13 @@ public class Tweet {
     c += 20;
     text = new String(tweetChars, c, 140);
     } catch(RuntimeException e) {
-      System.out.println("\nFailure!!!" + e.getMessage());
+      System.out.print("?");
+      System.out.flush();
       throw new IOException(e);
     }
 
-    //System.out.println("\nSuccess!");
+    System.out.print(".");
+    if((count++ % 1000) == 0) System.out.flush();
     //  if((count++ % 10000) == 0) System.out.println("\nProcessed " + (count) + " tweets so far.");
   }
 

@@ -31,10 +31,10 @@ public class IndexableTweeterpreter implements ZoieIndexableInterpreter<Tweet> {
 		public Document buildDocument()
 		{
 			Document doc = new Document();
-      doc.add(new Field("content", tweet.getText(), Field.Store.YES, Field.Index.ANALYZED));
+      doc.add(new Field("content", tweet.getText(), Field.Store.YES, Field.Index.ANALYZED_NO_NORMS));
       doc.add(new Field("user", tweet.getScreenName(), Field.Store.YES, Field.Index.ANALYZED_NO_NORMS));
-      doc.add(new Field("num_followers", pad(tweet.getNumFollowers()), Field.Store.NO, Field.Index.ANALYZED_NO_NORMS));
-      doc.add(new Field("timestamp", pad(tweet.getCreatedAt()), Field.Store.NO, Field.Index.ANALYZED_NO_NORMS));
+      doc.add(new Field("num_followers", pad(tweet.getNumFollowers()), Field.Store.YES, Field.Index.ANALYZED_NO_NORMS));
+      doc.add(new Field("timestamp", pad(System.currentTimeMillis() / 1000), Field.Store.YES, Field.Index.ANALYZED_NO_NORMS));
   //    doc.add(new NumericField("num_followers", Field.Store.NO, true).setIntValue(numFollowers));
   //    doc.add(new NumericField("timestamp", Field.Store.NO, true).setLongValue(createdAt));
       return doc;
@@ -58,7 +58,7 @@ public class IndexableTweeterpreter implements ZoieIndexableInterpreter<Tweet> {
 
   @Override
   public ZoieIndexable convertAndInterpret(Tweet src) {
-    System.out.print("*");
+    //System.out.print("*");
     return new TweetIndexable(src);
   }
 }

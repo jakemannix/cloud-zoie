@@ -61,8 +61,8 @@ public class SingleFileDataProvider<T> extends StreamDataProvider<T> {
 
   @Override
   public DataConsumer.DataEvent<T> next() {
-    if((position % 100000) == 0) {
-      System.out.println(((float)(System.nanoTime() - time)) / 1e9 + "s per 100k docs");
+    if((position % 10000) == 0) {
+      System.out.println(((float)(System.nanoTime() - time)) / 1e9 + "s per 10k docs");
       time = System.nanoTime();
     }
 
@@ -87,7 +87,7 @@ public class SingleFileDataProvider<T> extends StreamDataProvider<T> {
           } catch (IOException ioe) {
             char[] out = new char[bufArray.length];
             for(int j=0;j<out.length;j++) out[j] = (char)bufArray[j];
-            System.out.println(new String(out));
+      //      System.out.println(new String(out));
             flushInputToNextEvent();
             return next();
           }
